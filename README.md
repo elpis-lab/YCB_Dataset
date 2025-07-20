@@ -14,7 +14,5 @@ Here is the procedure of how this repository is made.
 
 ## Models not included
 
-This repository only includes models with Google 16K. The other models, shown as below, are not included.
-
-- models that don'y have google_16k:
-  - 001, 023, 039, 041, 046, 047, 049, 063-c/d/e/f, 072-f/g/h/i/j/k, 073-h/i/j/k/l/m, 076
+This repository only includes models with Google 16K. The other models, shown as below, are not included:
+- 001, 023, 039, 041, 046, 047, 049, 063-c/d/e/f, 072-f/g/h/i/j/k, 073-h/i/j/k/l/m, 076
