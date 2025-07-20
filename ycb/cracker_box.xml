@@ -1,0 +1,22 @@
+<mujoco model="cracker_box">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="cracker_box_visual_mesh" file="cracker_box/textured.obj" />
+    <mesh name="cracker_box_collision_mesh" file="cracker_box/textured_vhacd.stl" />
+    <texture name="cracker_box_texture" type="2d" file="cracker_box/texture_map.png" />
+    <material name="cracker_box_material" texture="cracker_box_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="cracker_box" pos="0 0 0" euler="0 0 0">
+      <freejoint name="cracker_box_joint" />
+      
+      <geom name="cracker_box_visual_geom" type="mesh" mesh="cracker_box_visual_mesh" material="cracker_box_material" pos="0.01485355781018036 0.01420505447388014 -0.10220486833098277" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="cracker_box_collision_geom" type="mesh" mesh="cracker_box_collision_mesh" pos="0.01485355781018036 0.01420505447388014 -0.10220486833098277" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.01485355781018036 0.01420505447388014 -0.10220486833098277" euler="0 0 0" mass="0.411" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

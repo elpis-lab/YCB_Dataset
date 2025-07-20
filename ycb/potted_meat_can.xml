@@ -1,0 +1,22 @@
+<mujoco model="potted_meat_can">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="potted_meat_can_visual_mesh" file="potted_meat_can/textured.obj" />
+    <mesh name="potted_meat_can_collision_mesh" file="potted_meat_can/textured_vhacd.stl" />
+    <texture name="potted_meat_can_texture" type="2d" file="potted_meat_can/texture_map.png" />
+    <material name="potted_meat_can_material" texture="potted_meat_can_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="potted_meat_can" pos="0 0 0" euler="0 0 0">
+      <freejoint name="potted_meat_can_joint" />
+      
+      <geom name="potted_meat_can_visual_geom" type="mesh" mesh="potted_meat_can_visual_mesh" material="potted_meat_can_material" pos="0.032840352216858736 0.02635271439745596 -0.03783085009135961" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="potted_meat_can_collision_geom" type="mesh" mesh="potted_meat_can_collision_mesh" pos="0.032840352216858736 0.02635271439745596 -0.03783085009135961" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.032840352216858736 0.02635271439745596 -0.03783085009135961" euler="0 0 0" mass="0.37" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

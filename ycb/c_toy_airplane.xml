@@ -1,0 +1,22 @@
+<mujoco model="c_toy_airplane">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="c_toy_airplane_visual_mesh" file="c_toy_airplane/textured.obj" />
+    <mesh name="c_toy_airplane_collision_mesh" file="c_toy_airplane/textured_vhacd.stl" />
+    <texture name="c_toy_airplane_texture" type="2d" file="c_toy_airplane/texture_map.png" />
+    <material name="c_toy_airplane_material" texture="c_toy_airplane_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="c_toy_airplane" pos="0 0 0" euler="0 0 0">
+      <freejoint name="c_toy_airplane_joint" />
+      
+      <geom name="c_toy_airplane_visual_geom" type="mesh" mesh="c_toy_airplane_visual_mesh" material="c_toy_airplane_material" pos="0.033398753233434206 -0.003384443109879014 -0.02614525198224048" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="c_toy_airplane_collision_geom" type="mesh" mesh="c_toy_airplane_collision_mesh" pos="0.033398753233434206 -0.003384443109879014 -0.02614525198224048" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.033398753233434206 -0.003384443109879014 -0.02614525198224048" euler="0 0 0" mass="0.114" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

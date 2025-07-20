@@ -1,0 +1,22 @@
+<mujoco model="phillips_screwdriver">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="phillips_screwdriver_visual_mesh" file="phillips_screwdriver/textured.obj" />
+    <mesh name="phillips_screwdriver_collision_mesh" file="phillips_screwdriver/textured_vhacd.stl" />
+    <texture name="phillips_screwdriver_texture" type="2d" file="phillips_screwdriver/texture_map.png" />
+    <material name="phillips_screwdriver_material" texture="phillips_screwdriver_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="phillips_screwdriver" pos="0 0 0" euler="0 0 0">
+      <freejoint name="phillips_screwdriver_joint" />
+      
+      <geom name="phillips_screwdriver_visual_geom" type="mesh" mesh="phillips_screwdriver_visual_mesh" material="phillips_screwdriver_material" pos="-0.0026626279153952586 -0.02222386939344705 -0.01637227553798352" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="phillips_screwdriver_collision_geom" type="mesh" mesh="phillips_screwdriver_collision_mesh" pos="-0.0026626279153952586 -0.02222386939344705 -0.01637227553798352" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="-0.0026626279153952586 -0.02222386939344705 -0.01637227553798352" euler="0 0 0" mass="0.097" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

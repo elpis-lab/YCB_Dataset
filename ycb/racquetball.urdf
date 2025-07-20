@@ -1,0 +1,23 @@
+<robot name="racquetball">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.009071044745210352 0.12221649947970037 -0.027571138362930195" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="racquetball/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.009071044745210352 0.12221649947970037 -0.027571138362930195" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="racquetball/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.041" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>

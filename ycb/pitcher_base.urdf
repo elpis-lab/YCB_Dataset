@@ -1,0 +1,23 @@
+<robot name="pitcher_base">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.013413446511744047 -0.03347736239251225 -0.12263624751276252" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="pitcher_base/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.013413446511744047 -0.03347736239251225 -0.12263624751276252" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="pitcher_base/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.178" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>

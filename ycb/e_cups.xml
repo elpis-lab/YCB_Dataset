@@ -1,0 +1,22 @@
+<mujoco model="e_cups">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="e_cups_visual_mesh" file="e_cups/textured.obj" />
+    <mesh name="e_cups_collision_mesh" file="e_cups/textured_vhacd.stl" />
+    <texture name="e_cups_texture" type="2d" file="e_cups/texture_map.png" />
+    <material name="e_cups_material" texture="e_cups_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="e_cups" pos="0 0 0" euler="0 0 0">
+      <freejoint name="e_cups_joint" />
+      
+      <geom name="e_cups_visual_geom" type="mesh" mesh="e_cups_visual_mesh" material="e_cups_material" pos="0.019152019112154205 0.07367966947628142 -0.030395630482407465" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="e_cups_collision_geom" type="mesh" mesh="e_cups_collision_mesh" pos="0.019152019112154205 0.07367966947628142 -0.030395630482407465" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.019152019112154205 0.07367966947628142 -0.030395630482407465" euler="0 0 0" mass="0.021" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,23 @@
+<robot name="i_cups">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.010981968779668252 -0.0023034321827084393 -0.03669757456242688" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="i_cups/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.010981968779668252 -0.0023034321827084393 -0.03669757456242688" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="i_cups/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.035" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>

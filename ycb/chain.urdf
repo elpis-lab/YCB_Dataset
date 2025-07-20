@@ -1,0 +1,23 @@
+<robot name="chain">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.034274940120650695 -0.018175325943306266 -0.009010247611937368" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="chain/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.034274940120650695 -0.018175325943306266 -0.009010247611937368" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="chain/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>

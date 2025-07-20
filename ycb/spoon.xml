@@ -1,0 +1,22 @@
+<mujoco model="spoon">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="spoon_visual_mesh" file="spoon/textured.obj" />
+    <mesh name="spoon_collision_mesh" file="spoon/textured_vhacd.stl" />
+    <texture name="spoon_texture" type="2d" file="spoon/texture_map.png" />
+    <material name="spoon_material" texture="spoon_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="spoon" pos="0 0 0" euler="0 0 0">
+      <freejoint name="spoon_joint" />
+      
+      <geom name="spoon_visual_geom" type="mesh" mesh="spoon_visual_mesh" material="spoon_material" pos="0.01805591680130397 0.010160565119345408 -0.010048592434568833" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="spoon_collision_geom" type="mesh" mesh="spoon_collision_mesh" pos="0.01805591680130397 0.010160565119345408 -0.010048592434568833" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.01805591680130397 0.010160565119345408 -0.010048592434568833" euler="0 0 0" mass="0.03" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

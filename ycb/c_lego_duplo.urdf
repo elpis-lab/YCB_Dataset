@@ -1,0 +1,23 @@
+<robot name="c_lego_duplo">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.013173349121726697 0.022850899210760046 -0.012672119612308666" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="c_lego_duplo/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.013173349121726697 0.022850899210760046 -0.012672119612308666" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="c_lego_duplo/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.0372" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>

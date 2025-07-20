@@ -1,0 +1,22 @@
+<mujoco model="extra_large_clamp">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="extra_large_clamp_visual_mesh" file="extra_large_clamp/textured.obj" />
+    <mesh name="extra_large_clamp_collision_mesh" file="extra_large_clamp/textured_vhacd.stl" />
+    <texture name="extra_large_clamp_texture" type="2d" file="extra_large_clamp/texture_map.png" />
+    <material name="extra_large_clamp_material" texture="extra_large_clamp_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="extra_large_clamp" pos="0 0 0" euler="0 0 0">
+      <freejoint name="extra_large_clamp_joint" />
+      
+      <geom name="extra_large_clamp_visual_geom" type="mesh" mesh="extra_large_clamp_visual_mesh" material="extra_large_clamp_material" pos="0.029549933960517274 0.03660538138997692 -0.018078943770709878" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="extra_large_clamp_collision_geom" type="mesh" mesh="extra_large_clamp_collision_mesh" pos="0.029549933960517274 0.03660538138997692 -0.018078943770709878" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.029549933960517274 0.03660538138997692 -0.018078943770709878" euler="0 0 0" mass="0.202" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

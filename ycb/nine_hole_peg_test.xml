@@ -1,0 +1,22 @@
+<mujoco model="nine_hole_peg_test">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="nine_hole_peg_test_visual_mesh" file="nine_hole_peg_test/textured.obj" />
+    <mesh name="nine_hole_peg_test_collision_mesh" file="nine_hole_peg_test/textured_vhacd.stl" />
+    <texture name="nine_hole_peg_test_texture" type="2d" file="nine_hole_peg_test/texture_map.png" />
+    <material name="nine_hole_peg_test_material" texture="nine_hole_peg_test_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="nine_hole_peg_test" pos="0 0 0" euler="0 0 0">
+      <freejoint name="nine_hole_peg_test_joint" />
+      
+      <geom name="nine_hole_peg_test_visual_geom" type="mesh" mesh="nine_hole_peg_test_visual_mesh" material="nine_hole_peg_test_material" pos="0.000188539225942058 -0.024373721273276618 -0.019952866039031774" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="nine_hole_peg_test_collision_geom" type="mesh" mesh="nine_hole_peg_test_collision_mesh" pos="0.000188539225942058 -0.024373721273276618 -0.019952866039031774" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.000188539225942058 -0.024373721273276618 -0.019952866039031774" euler="0 0 0" mass="1.435" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

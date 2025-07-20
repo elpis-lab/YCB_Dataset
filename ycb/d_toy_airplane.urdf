@@ -1,0 +1,23 @@
+<robot name="d_toy_airplane">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.02223323227368506 -0.0014562790387810324 -0.02130339450857217" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="d_toy_airplane/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.02223323227368506 -0.0014562790387810324 -0.02130339450857217" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="d_toy_airplane/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.114" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>

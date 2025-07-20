@@ -1,0 +1,23 @@
+<robot name="potted_meat_can">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.032840352216858736 0.02635271439745596 -0.03783085009135961" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="potted_meat_can/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.032840352216858736 0.02635271439745596 -0.03783085009135961" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="potted_meat_can/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.37" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>

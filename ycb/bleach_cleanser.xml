@@ -1,0 +1,22 @@
+<mujoco model="bleach_cleanser">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="bleach_cleanser_visual_mesh" file="bleach_cleanser/textured.obj" />
+    <mesh name="bleach_cleanser_collision_mesh" file="bleach_cleanser/textured_vhacd.stl" />
+    <texture name="bleach_cleanser_texture" type="2d" file="bleach_cleanser/texture_map.png" />
+    <material name="bleach_cleanser_material" texture="bleach_cleanser_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="bleach_cleanser" pos="0 0 0" euler="0 0 0">
+      <freejoint name="bleach_cleanser_joint" />
+      
+      <geom name="bleach_cleanser_visual_geom" type="mesh" mesh="bleach_cleanser_visual_mesh" material="bleach_cleanser_material" pos="0.017138949272641098 -0.011574369859748879 -0.09969796254743377" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="bleach_cleanser_collision_geom" type="mesh" mesh="bleach_cleanser_collision_mesh" pos="0.017138949272641098 -0.011574369859748879 -0.09969796254743377" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.017138949272641098 -0.011574369859748879 -0.09969796254743377" euler="0 0 0" mass="1.131" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

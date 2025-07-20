@@ -1,0 +1,22 @@
+<mujoco model="scissors">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="scissors_visual_mesh" file="scissors/textured.obj" />
+    <mesh name="scissors_collision_mesh" file="scissors/textured_vhacd.stl" />
+    <texture name="scissors_texture" type="2d" file="scissors/texture_map.png" />
+    <material name="scissors_material" texture="scissors_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="scissors" pos="0 0 0" euler="0 0 0">
+      <freejoint name="scissors_joint" />
+      
+      <geom name="scissors_visual_geom" type="mesh" mesh="scissors_visual_mesh" material="scissors_material" pos="-0.01459152171807974 -0.0031621364077388443 -0.007400674371156582" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="scissors_collision_geom" type="mesh" mesh="scissors_collision_mesh" pos="-0.01459152171807974 -0.0031621364077388443 -0.007400674371156582" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="-0.01459152171807974 -0.0031621364077388443 -0.007400674371156582" euler="0 0 0" mass="0.082" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

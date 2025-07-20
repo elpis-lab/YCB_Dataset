@@ -1,0 +1,23 @@
+<robot name="power_drill">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="power_drill/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="power_drill/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.895" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>

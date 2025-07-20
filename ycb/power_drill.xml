@@ -1,0 +1,22 @@
+<mujoco model="power_drill">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="power_drill_visual_mesh" file="power_drill/textured.obj" />
+    <mesh name="power_drill_collision_mesh" file="power_drill/textured_vhacd.stl" />
+    <texture name="power_drill_texture" type="2d" file="power_drill/texture_map.png" />
+    <material name="power_drill_material" texture="power_drill_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="power_drill" pos="0 0 0" euler="0 0 0">
+      <freejoint name="power_drill_joint" />
+      
+      <geom name="power_drill_visual_geom" type="mesh" mesh="power_drill_visual_mesh" material="power_drill_material" pos="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="power_drill_collision_geom" type="mesh" mesh="power_drill_collision_mesh" pos="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" euler="0 0 0" mass="0.895" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,22 @@
+<mujoco model="tennis_ball">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="tennis_ball_visual_mesh" file="tennis_ball/textured.obj" />
+    <mesh name="tennis_ball_collision_mesh" file="tennis_ball/textured_vhacd.stl" />
+    <texture name="tennis_ball_texture" type="2d" file="tennis_ball/texture_map.png" />
+    <material name="tennis_ball_material" texture="tennis_ball_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="tennis_ball" pos="0 0 0" euler="0 0 0">
+      <freejoint name="tennis_ball_joint" />
+      
+      <geom name="tennis_ball_visual_geom" type="mesh" mesh="tennis_ball_visual_mesh" material="tennis_ball_material" pos="-0.008233239762589124 0.044192426304665286 -0.03288662063700162" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="tennis_ball_collision_geom" type="mesh" mesh="tennis_ball_collision_mesh" pos="-0.008233239762589124 0.044192426304665286 -0.03288662063700162" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="-0.008233239762589124 0.044192426304665286 -0.03288662063700162" euler="0 0 0" mass="0.058" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,22 @@
+<mujoco model="golf_ball">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="golf_ball_visual_mesh" file="golf_ball/textured.obj" />
+    <mesh name="golf_ball_collision_mesh" file="golf_ball/textured_vhacd.stl" />
+    <texture name="golf_ball_texture" type="2d" file="golf_ball/texture_map.png" />
+    <material name="golf_ball_material" texture="golf_ball_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="golf_ball" pos="0 0 0" euler="0 0 0">
+      <freejoint name="golf_ball_joint" />
+      
+      <geom name="golf_ball_visual_geom" type="mesh" mesh="golf_ball_visual_mesh" material="golf_ball_material" pos="0.006528858552747081 0.03041729713329846 -0.02092653007258482" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="golf_ball_collision_geom" type="mesh" mesh="golf_ball_collision_mesh" pos="0.006528858552747081 0.03041729713329846 -0.02092653007258482" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.006528858552747081 0.03041729713329846 -0.02092653007258482" euler="0 0 0" mass="0.046" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

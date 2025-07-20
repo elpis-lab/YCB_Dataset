@@ -1,0 +1,22 @@
+<mujoco model="g_lego_duplo">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="g_lego_duplo_visual_mesh" file="g_lego_duplo/textured.obj" />
+    <mesh name="g_lego_duplo_collision_mesh" file="g_lego_duplo/textured_vhacd.stl" />
+    <texture name="g_lego_duplo_texture" type="2d" file="g_lego_duplo/texture_map.png" />
+    <material name="g_lego_duplo_material" texture="g_lego_duplo_texture" />
+  </asset>
+
+  <worldbody>
+    <body name="g_lego_duplo" pos="0 0 0" euler="0 0 0">
+      <freejoint name="g_lego_duplo_joint" />
+      
+      <geom name="g_lego_duplo_visual_geom" type="mesh" mesh="g_lego_duplo_visual_mesh" material="g_lego_duplo_material" pos="0.01440079954550051 0.08344438751622156 -0.031183760567335284" euler="0 0 0" contype="0" conaffinity="0" group="0" />
+      
+      <geom name="g_lego_duplo_collision_geom" type="mesh" mesh="g_lego_duplo_collision_mesh" pos="0.01440079954550051 0.08344438751622156 -0.031183760567335284" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      
+      <inertial pos="0.01440079954550051 0.08344438751622156 -0.031183760567335284" euler="0 0 0" mass="0.1488" diaginertia="0.001 0.001 0.001" />
+    </body>
+  </worldbody>
+</mujoco>

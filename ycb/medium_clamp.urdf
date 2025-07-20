@@ -1,0 +1,23 @@
+<robot name="medium_clamp">
+    <link name="base_link">
+        <visual>
+            <origin xyz="-0.010827483056379221 0.014903599956658636 -0.012617934887942762" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="medium_clamp/textured.obj" scale="1 1 1" />
+            </geometry>
+            <material name="texture">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.010827483056379221 0.014903599956658636 -0.012617934887942762" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="medium_clamp/textured_vhacd.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.059" />
+            <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+        </inertial>
+    </link>
+</robot>
