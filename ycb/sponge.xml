@@ -16,7 +16,7 @@
       
       <geom name="sponge_collision_geom" type="mesh" mesh="sponge_collision_mesh" pos="0.015842356573766914 -0.011520562220217976 -0.00937252508059704" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.015842356573766914 -0.011520562220217976 -0.00937252508059704" euler="0 0 0" mass="0.0062" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.0062" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

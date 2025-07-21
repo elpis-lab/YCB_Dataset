@@ -16,7 +16,7 @@
       
       <geom name="pear_collision_geom" type="mesh" mesh="pear_collision_mesh" pos="0.032542733786051076 -0.011075535445138571 -0.030040521498604082" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.032542733786051076 -0.011075535445138571 -0.030040521498604082" euler="0 0 0" mass="0.049" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.049" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

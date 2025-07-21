@@ -16,7 +16,7 @@
       
       <geom name="b_colored_wood_blocks_collision_geom" type="mesh" mesh="b_colored_wood_blocks_collision_mesh" pos="0.018821263920805856 0.008818559894969996 -0.012633433800824467" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.018821263920805856 0.008818559894969996 -0.012633433800824467" euler="0 0 0" mass="0.0108" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.0108" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

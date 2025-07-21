@@ -16,7 +16,7 @@
       
       <geom name="adjustable_wrench_collision_geom" type="mesh" mesh="adjustable_wrench_collision_mesh" pos="-0.01450146241685899 0.049664842094331994 -0.004250780997626007" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="-0.01450146241685899 0.049664842094331994 -0.004250780997626007" euler="0 0 0" mass="0.252" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.252" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

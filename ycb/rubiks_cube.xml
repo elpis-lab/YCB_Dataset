@@ -16,7 +16,7 @@
       
       <geom name="rubiks_cube_collision_geom" type="mesh" mesh="rubiks_cube_collision_mesh" pos="0.016219049878342388 0.00048529056442859776 -0.028589928178413302" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.016219049878342388 0.00048529056442859776 -0.028589928178413302" euler="0 0 0" mass="0.094" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.094" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

@@ -16,7 +16,7 @@
       
       <geom name="b_marbles_collision_geom" type="mesh" mesh="b_marbles_collision_mesh" pos="0.009111904265061218 0.04511233142812526 -0.016845139796964975" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.009111904265061218 0.04511233142812526 -0.016845139796964975" euler="0 0 0" mass="0.001" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.001" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

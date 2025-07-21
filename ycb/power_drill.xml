@@ -16,7 +16,7 @@
       
       <geom name="power_drill_collision_geom" type="mesh" mesh="power_drill_collision_mesh" pos="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" euler="0 0 0" mass="0.895" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.895" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

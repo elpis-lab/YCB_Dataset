@@ -16,7 +16,7 @@
       
       <geom name="banana_collision_geom" type="mesh" mesh="banana_collision_mesh" pos="0.009936102440002158 -0.004072679186328214 -0.01712688923116843" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.009936102440002158 -0.004072679186328214 -0.01712688923116843" euler="0 0 0" mass="0.066" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.066" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

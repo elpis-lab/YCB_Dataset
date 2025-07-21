@@ -16,7 +16,7 @@
       
       <geom name="golf_ball_collision_geom" type="mesh" mesh="golf_ball_collision_mesh" pos="0.006528858552747081 0.03041729713329846 -0.02092653007258482" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.006528858552747081 0.03041729713329846 -0.02092653007258482" euler="0 0 0" mass="0.046" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.046" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

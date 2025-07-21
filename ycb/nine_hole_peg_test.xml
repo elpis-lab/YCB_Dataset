@@ -16,7 +16,7 @@
       
       <geom name="nine_hole_peg_test_collision_geom" type="mesh" mesh="nine_hole_peg_test_collision_mesh" pos="0.000188539225942058 -0.024373721273276618 -0.019952866039031774" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.000188539225942058 -0.024373721273276618 -0.019952866039031774" euler="0 0 0" mass="1.435" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="1.435" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

@@ -16,7 +16,7 @@
       
       <geom name="strawberry_collision_geom" type="mesh" mesh="strawberry_collision_mesh" pos="0.0014938727773305587 -0.015432679933728788 -0.02111450326881559" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.0014938727773305587 -0.015432679933728788 -0.02111450326881559" euler="0 0 0" mass="0.018" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.018" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

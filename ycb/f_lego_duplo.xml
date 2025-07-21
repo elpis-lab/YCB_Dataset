@@ -16,7 +16,7 @@
       
       <geom name="f_lego_duplo_collision_geom" type="mesh" mesh="f_lego_duplo_collision_mesh" pos="0.028303653148494833 0.06646108978076667 -0.02360720585959244" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.028303653148494833 0.06646108978076667 -0.02360720585959244" euler="0 0 0" mass="0.0372" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.0372" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

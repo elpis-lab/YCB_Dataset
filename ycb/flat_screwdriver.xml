@@ -16,7 +16,7 @@
       
       <geom name="flat_screwdriver_collision_geom" type="mesh" mesh="flat_screwdriver_collision_mesh" pos="-0.023228351441964463 0.02270556071884342 -0.016179821688211804" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="-0.023228351441964463 0.02270556071884342 -0.016179821688211804" euler="0 0 0" mass="0.0984" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.0984" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

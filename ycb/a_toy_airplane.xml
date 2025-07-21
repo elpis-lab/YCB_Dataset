@@ -16,7 +16,7 @@
       
       <geom name="a_toy_airplane_collision_geom" type="mesh" mesh="a_toy_airplane_collision_mesh" pos="-0.03572475763431454 -0.030807398220545207 -0.09092314374993266" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="-0.03572475763431454 -0.030807398220545207 -0.09092314374993266" euler="0 0 0" mass="0.114" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.114" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

@@ -16,7 +16,7 @@
       
       <geom name="a_cups_collision_geom" type="mesh" mesh="a_cups_collision_mesh" pos="0.03054243478832419 0.04266839741228885 -0.028457527482021325" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.03054243478832419 0.04266839741228885 -0.028457527482021325" euler="0 0 0" mass="0.013" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.013" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>

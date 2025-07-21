@@ -323,10 +323,6 @@ class ObjectBuilder:
             # Update collision geom position
             if collision_geom is not None:
                 collision_geom.attrib["pos"] = mass_center_str
-            # Update inertial position
-            inertial = new_xml.find(".//inertial")
-            if inertial is not None:
-                inertial.attrib["pos"] = mass_center_str
 
         return new_xml
 

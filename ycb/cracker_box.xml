@@ -16,7 +16,7 @@
       
       <geom name="cracker_box_collision_geom" type="mesh" mesh="cracker_box_collision_mesh" pos="0.01485355781018036 0.01420505447388014 -0.10220486833098277" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       
-      <inertial pos="0.01485355781018036 0.01420505447388014 -0.10220486833098277" euler="0 0 0" mass="0.411" diaginertia="0.001 0.001 0.001" />
+      <inertial pos="0 0 0" euler="0 0 0" mass="0.411" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
 </mujoco>
