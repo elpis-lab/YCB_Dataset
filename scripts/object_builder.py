@@ -1,7 +1,7 @@
 """Generate urdf for objects in a folder with a provided prototype urdf file.
 Script from https://github.com/harvard-microrobotics/object2urdf
 
-Modified to use VHACD and CoACD for convex decomposition.
+Modified to use CoACD for convex decomposition.
 Added mass file to the urdf.
 Also modified to generate mujoco xml files.
 """
@@ -11,10 +11,46 @@ import numpy as np
 import os
 import copy
 import trimesh
+
+import coacd
 import json
 import xml.etree.ElementTree as ET
 
-from convex_decomposition import do_vhacd, do_coacd
+
+def run_coacd(filename, **kwargs):
+    """
+    Run convex decomposition with COACD
+
+    For COACD, the result collision mesh
+    is a concatenate of all the convex parts
+    """
+    mesh = trimesh.load(filename)
+    mesh = coacd.Mesh(mesh.vertices, mesh.faces)
+
+    # Run COACD decomposition
+    decimate_face_count = kwargs.pop("decimate_face_count", -1)
+    kwargs.pop("decimate_face_count", None)
+    parts = coacd.run_coacd(mesh, **kwargs)
+
+    # Run decimation and export each part
+    out_files = []
+    outfile = os.path.splitext(filename)[0]
+    for i, (vertices, indices) in enumerate(parts):
+        # convert back to trimesh format
+        vertices = np.asarray(vertices, dtype=float)
+        indices = np.asarray(indices, dtype=np.int64)
+        convex = trimesh.Trimesh(vertices, indices, process=False)
+
+        # decimate the convex parts
+        if decimate_face_count > 0:
+            convex = convex.simplify_quadric_decimation(
+                face_count=decimate_face_count
+            )
+
+        outpath = f"{outfile}_coacd_{i}.stl"
+        out_files.append(outpath)
+        convex.export(outpath, file_type="stl")
+    return out_files
 
 
 class ObjectBuilder:
@@ -24,13 +60,11 @@ class ObjectBuilder:
         urdf_prototype="_prototype.urdf",
         xml_prototype="_prototype.xml",
         mass_file="ycb_mass.json",
-        decompose_method="vhacd",
     ):
         self.object_folder = os.path.abspath(object_folder)
         self.urdf_base = self._read_xml(urdf_prototype)
         self.xml_base = self._read_xml(xml_prototype)
         self.mass_data = self._load_mass_data(mass_file)
-        self.method = decompose_method
 
     # Recursively get all files with a specific extension, excluding a certain suffix
     def _get_files_recursively(
@@ -42,9 +76,7 @@ class ObjectBuilder:
                     filter_extension
                 ):
                     if isinstance(exclude_suffix, str):
-                        if not file.lower().endswith(
-                            exclude_suffix + filter_extension
-                        ):
+                        if not exclude_suffix in file.lower():
                             yield (
                                 root,
                                 file,
@@ -167,23 +199,16 @@ class ObjectBuilder:
         self,
         object_file,
         object_name,
-        collision_file=None,
+        collision_files,
         mass_center=None,
         mass_value=None,
     ):
-        # If no separate collision geometry is provided, use the object file
-        if collision_file is None:
-            collision_file = object_file
-
         # Update the filenames and object name
         new_urdf = copy.deepcopy(self.urdf_base)
+        new_urdf.attrib["name"] = object_name
         self.replace_urdf_attribute(
             new_urdf, ".//visual/geometry/mesh", "filename", object_file
         )
-        self.replace_urdf_attribute(
-            new_urdf, ".//collision/geometry/mesh", "filename", collision_file
-        )
-        new_urdf.attrib["name"] = object_name
 
         # Update mass if provided
         if mass_value is not None:
@@ -237,6 +262,22 @@ class ObjectBuilder:
                     "rpy": self._list2str(rpy),
                 },
             )
+
+        # Update the collision mesh files
+        self.replace_urdf_attribute(
+            new_urdf,
+            ".//collision/geometry/mesh",
+            "filename",
+            collision_files[0],
+        )
+        # Copy collision sections and replace mesh files one by one
+        col = new_urdf.find(".//collision")
+        parent = new_urdf.find(".//link")
+        for collision_file in collision_files[1:]:
+            clone = copy.deepcopy(col)
+            clone.find("geometry/mesh").attrib["filename"] = collision_file
+            parent.insert(list(parent).index(col) + 1, clone)
+            col = clone
         return new_urdf
 
     # Make an updated copy of the Mujoco XML for the current object
@@ -244,14 +285,10 @@ class ObjectBuilder:
         self,
         object_file,
         object_name,
-        collision_file=None,
+        collision_files,
         mass_center=None,
         mass_value=None,
     ):
-        # If no separate collision geometry is provided, use the object file
-        if collision_file is None:
-            collision_file = object_file
-
         # Update the filenames and object name
         new_xml = copy.deepcopy(self.xml_base)
         new_xml.attrib["model"] = object_name
@@ -266,8 +303,17 @@ class ObjectBuilder:
             ".//asset/mesh[@name='_name_collision_mesh']"
         )
         if collision_mesh is not None:
-            collision_mesh.attrib["name"] = f"{object_name}_collision_mesh"
-            collision_mesh.attrib["file"] = collision_file
+            collision_mesh.attrib["name"] = f"{object_name}_collision_mesh_0"
+            collision_mesh.attrib["file"] = collision_files[0]
+            # Copy collision sections and replace mesh files one by one
+            parent = new_xml.find("asset")
+            for i, collision_file in enumerate(collision_files[1:]):
+                clone = copy.deepcopy(collision_mesh)
+                clone.attrib["name"] = f"{object_name}_collision_mesh_{i + 1}"
+                clone.attrib["file"] = collision_file
+                parent.insert(
+                    list(parent).index(collision_mesh) + i + 1, clone
+                )
 
         # Update texture and material names
         texture = new_xml.find(".//asset/texture[@name='_name_texture']")
@@ -303,8 +349,8 @@ class ObjectBuilder:
 
         collision_geom = new_xml.find(".//geom[@name='_name_collision_geom']")
         if collision_geom is not None:
-            collision_geom.attrib["name"] = f"{object_name}_collision_geom"
-            collision_geom.attrib["mesh"] = f"{object_name}_collision_mesh"
+            collision_geom.attrib["name"] = f"{object_name}_collision_geom_0"
+            collision_geom.attrib["mesh"] = f"{object_name}_collision_mesh_0"
 
         # Update mass if provided
         inertial = new_xml.find(".//inertial")
@@ -323,6 +369,15 @@ class ObjectBuilder:
             # Update collision geom position
             if collision_geom is not None:
                 collision_geom.attrib["pos"] = mass_center_str
+
+        # Update the collision mesh files
+        # Copy collision sections and replace mesh files one by one
+        parent = new_xml.find(".//worldbody/body")
+        for i, collision_file in enumerate(collision_files[1:]):
+            clone = copy.deepcopy(collision_geom)
+            clone.attrib["name"] = f"{object_name}_collision_geom_{i + 1}"
+            clone.attrib["mesh"] = f"{object_name}_collision_mesh_{i + 1}"
+            parent.insert(list(parent).index(collision_geom) + i + 1, clone)
 
         return new_xml
 
@@ -391,7 +446,7 @@ class ObjectBuilder:
         else:
             mass_center = None
 
-        # If the user wants to run convex decomposition on concave objects, do it.
+        # If the user wants to run convex decomposition on concave objects
         if decompose_concave:
             if file_extension == ".stl":
                 obj_filename = self.save_to_obj(filename)
@@ -401,35 +456,37 @@ class ObjectBuilder:
                 visual_file = rel
             else:
                 raise ValueError(
-                    "Your filetype needs to be an STL or OBJ to perform concave decomposition"
+                    "Your filetype needs to be an STL or OBJ"
+                    + "to perform concave decomposition"
                 )
 
-            outfile = obj_filename.replace(".obj", "_" + self.method + ".stl")
-            collision_file = visual_file.replace(
-                ".obj", "_" + self.method + ".stl"
-            )
-
-            # Only run a decomposition if one does not exist, or if the user forces an overwrite
-            if not os.path.exists(outfile) or force_decompose:
-                do_vhacd(obj_filename, outfile, **kwargs)
+            # Only run a decomposition if one does not exist,
+            # or if the user forces an overwrite
+            check_file = obj_filename.replace(".obj", "_" + "coacd_0" + ".stl")
+            if not os.path.exists(check_file) or force_decompose:
+                collision_paths = run_coacd(obj_filename, **kwargs)
+                collision_files = [
+                    os.path.relpath(path, output_folder)
+                    for path in collision_paths
+                ]
         else:
-            collision_file = visual_file
+            collision_files = [visual_file]
 
         urdf_out = self.update_urdf(
             visual_file,
             name,
-            collision_file=collision_file,
-            mass_center=mass_center,
-            mass_value=mass_value,
-        )
-        xml_out = self.update_xml(
-            visual_file,
-            name,
-            collision_file=collision_file,
+            collision_files=collision_files,
             mass_center=mass_center,
             mass_value=mass_value,
         )
         self.save_file(urdf_out, name + ".urdf", force_overwrite)
+        xml_out = self.update_xml(
+            visual_file,
+            name,
+            collision_files=collision_files,
+            mass_center=mass_center,
+            mass_value=mass_value,
+        )
         self.save_file(xml_out, name + ".xml", force_overwrite)
 
     # Build the URDFs for all objects in your library.
@@ -440,27 +497,27 @@ class ObjectBuilder:
         obj_files = self._get_files_recursively(
             self.object_folder,
             filter_extension=".obj",
-            exclude_suffix=self.method,
+            exclude_suffix="coacd",
         )
         stl_files = self._get_files_recursively(
             self.object_folder,
             filter_extension=".stl",
-            exclude_suffix=self.method,
+            exclude_suffix="coacd",
         )
 
         obj_folders = []
         for root, _, full_file in obj_files:
-            obj_folders.append(root)
-            self.build_description(full_file, **kwargs)
-
             common = os.path.commonprefix([self.object_folder, full_file])
             rel = os.path.join(full_file.replace(common, ""))
             print("\tBuilding: %s" % (rel))
 
+            obj_folders.append(root)
+            self.build_description(full_file, **kwargs)
+
         for root, _, full_file in stl_files:
             if root not in obj_folders:
-                self.build_description(full_file, **kwargs)
-
                 common = os.path.commonprefix([self.object_folder, full_file])
                 rel = os.path.join(full_file.replace(common, ""))
                 print("Building: %s" % (rel))
+
+                self.build_description(full_file, **kwargs)

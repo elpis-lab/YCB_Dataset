@@ -11,18 +11,20 @@ from object_builder import ObjectBuilder
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 object_folder = root_dir + "/ycb"
 
+max_convex_hull = 4  # for coacd, default -1
+decimate_face_count = 32  # for decimation, default -1 (no decimation)
+
 builder = ObjectBuilder(
     object_folder,
     "_prototype.urdf",
     "_prototype.xml",
     "ycb_mass.json",
-    "vhacd",
 )
 builder.build_library(
     force_overwrite=True,
     center="mass",  # object center is at mass center
-    decompose_concave=True,  # build *_vhacd.obj files
-    force_decompose=False,  # overwrite decomposed files
-    resolution=4000,  # resolution for vhacd (default 4e5)
-    maxConvexHulls=16,  # max convex hulls for vhacd (default 64)
+    decompose_concave=True,  # build *_coacd.obj collision mesh
+    force_decompose=True,  # overwrite decomposed files
+    max_convex_hull=max_convex_hull,
+    decimate_face_count=decimate_face_count,
 )

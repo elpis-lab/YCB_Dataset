@@ -11,15 +11,12 @@
   <worldbody>
     <body name="_name" pos="0 0 0" euler="0 0 0">
       <freejoint name="_name_joint"/>
-      <!-- Visual -->
       <geom name="_name_visual_geom" type="mesh" mesh="_name_visual_mesh" material="_name_material"
             pos="0 0 0" euler="0 0 0"
             contype="0" conaffinity="0" group="0"/>
-      <!-- Collision -->
       <geom name="_name_collision_geom" type="mesh" mesh="_name_collision_mesh"
             pos="0 0 0" euler="0 0 0"
             contype="1" conaffinity="1" group="3"/>
-      <!-- Inertia -->
       <inertial pos="0 0 0" euler="0 0 0" mass="1.0" diaginertia="0.001 0.001 0.001"/>
     </body>
   </worldbody>
