@@ -3,7 +3,10 @@
 
   <asset>
     <mesh name="c_cups_visual_mesh" file="c_cups/textured.obj" />
-    <mesh name="c_cups_collision_mesh" file="c_cups/textured_vhacd.stl" />
+    <mesh name="c_cups_collision_mesh_0" file="c_cups/textured_coacd_0.stl" />
+    <mesh name="c_cups_collision_mesh_1" file="c_cups/textured_coacd_1.stl" />
+    <mesh name="c_cups_collision_mesh_2" file="c_cups/textured_coacd_2.stl" />
+    <mesh name="c_cups_collision_mesh_3" file="c_cups/textured_coacd_3.stl" />
     <texture name="c_cups_texture" type="2d" file="c_cups/texture_map.png" />
     <material name="c_cups_material" texture="c_cups_texture" />
   </asset>
@@ -11,11 +14,11 @@
   <worldbody>
     <body name="c_cups" pos="0 0 0" euler="0 0 0">
       <freejoint name="c_cups_joint" />
-      
       <geom name="c_cups_visual_geom" type="mesh" mesh="c_cups_visual_mesh" material="c_cups_material" pos="0.01447497482279456 0.06461685625471408 -0.031162156357884614" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="c_cups_collision_geom" type="mesh" mesh="c_cups_collision_mesh" pos="0.01447497482279456 0.06461685625471408 -0.031162156357884614" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="c_cups_collision_geom_0" type="mesh" mesh="c_cups_collision_mesh_0" pos="0.01447497482279456 0.06461685625471408 -0.031162156357884614" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="c_cups_collision_geom_1" type="mesh" mesh="c_cups_collision_mesh_1" pos="0.01447497482279456 0.06461685625471408 -0.031162156357884614" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="c_cups_collision_geom_2" type="mesh" mesh="c_cups_collision_mesh_2" pos="0.01447497482279456 0.06461685625471408 -0.031162156357884614" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="c_cups_collision_geom_3" type="mesh" mesh="c_cups_collision_mesh_3" pos="0.01447497482279456 0.06461685625471408 -0.031162156357884614" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.017" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

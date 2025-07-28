@@ -12,7 +12,19 @@
         <collision>
             <origin xyz="-0.0026626279153952586 -0.02222386939344705 -0.01637227553798352" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="phillips_screwdriver/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="phillips_screwdriver/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.0026626279153952586 -0.02222386939344705 -0.01637227553798352" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="phillips_screwdriver/textured_coacd_1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.0026626279153952586 -0.02222386939344705 -0.01637227553798352" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="phillips_screwdriver/textured_coacd_2.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

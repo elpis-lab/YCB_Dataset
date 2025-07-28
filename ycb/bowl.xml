@@ -3,7 +3,10 @@
 
   <asset>
     <mesh name="bowl_visual_mesh" file="bowl/textured.obj" />
-    <mesh name="bowl_collision_mesh" file="bowl/textured_vhacd.stl" />
+    <mesh name="bowl_collision_mesh_0" file="bowl/textured_coacd_0.stl" />
+    <mesh name="bowl_collision_mesh_1" file="bowl/textured_coacd_1.stl" />
+    <mesh name="bowl_collision_mesh_2" file="bowl/textured_coacd_2.stl" />
+    <mesh name="bowl_collision_mesh_3" file="bowl/textured_coacd_3.stl" />
     <texture name="bowl_texture" type="2d" file="bowl/texture_map.png" />
     <material name="bowl_material" texture="bowl_texture" />
   </asset>
@@ -11,11 +14,11 @@
   <worldbody>
     <body name="bowl" pos="0 0 0" euler="0 0 0">
       <freejoint name="bowl_joint" />
-      
       <geom name="bowl_visual_geom" type="mesh" mesh="bowl_visual_mesh" material="bowl_material" pos="0.014272485683301438 0.045728422080814235 -0.026772347862895073" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="bowl_collision_geom" type="mesh" mesh="bowl_collision_mesh" pos="0.014272485683301438 0.045728422080814235 -0.026772347862895073" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="bowl_collision_geom_0" type="mesh" mesh="bowl_collision_mesh_0" pos="0.014272485683301438 0.045728422080814235 -0.026772347862895073" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="bowl_collision_geom_1" type="mesh" mesh="bowl_collision_mesh_1" pos="0.014272485683301438 0.045728422080814235 -0.026772347862895073" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="bowl_collision_geom_2" type="mesh" mesh="bowl_collision_mesh_2" pos="0.014272485683301438 0.045728422080814235 -0.026772347862895073" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="bowl_collision_geom_3" type="mesh" mesh="bowl_collision_mesh_3" pos="0.014272485683301438 0.045728422080814235 -0.026772347862895073" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.147" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

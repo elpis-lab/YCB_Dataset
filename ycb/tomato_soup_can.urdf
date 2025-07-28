@@ -12,7 +12,25 @@
         <collision>
             <origin xyz="0.009342099371394881 -0.08422424437662782 -0.05002583293554274" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="tomato_soup_can/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="tomato_soup_can/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.009342099371394881 -0.08422424437662782 -0.05002583293554274" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="tomato_soup_can/textured_coacd_1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.009342099371394881 -0.08422424437662782 -0.05002583293554274" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="tomato_soup_can/textured_coacd_2.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.009342099371394881 -0.08422424437662782 -0.05002583293554274" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="tomato_soup_can/textured_coacd_3.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

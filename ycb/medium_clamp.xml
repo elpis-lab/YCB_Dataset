@@ -3,7 +3,10 @@
 
   <asset>
     <mesh name="medium_clamp_visual_mesh" file="medium_clamp/textured.obj" />
-    <mesh name="medium_clamp_collision_mesh" file="medium_clamp/textured_vhacd.stl" />
+    <mesh name="medium_clamp_collision_mesh_0" file="medium_clamp/textured_coacd_0.stl" />
+    <mesh name="medium_clamp_collision_mesh_1" file="medium_clamp/textured_coacd_1.stl" />
+    <mesh name="medium_clamp_collision_mesh_2" file="medium_clamp/textured_coacd_2.stl" />
+    <mesh name="medium_clamp_collision_mesh_3" file="medium_clamp/textured_coacd_3.stl" />
     <texture name="medium_clamp_texture" type="2d" file="medium_clamp/texture_map.png" />
     <material name="medium_clamp_material" texture="medium_clamp_texture" />
   </asset>
@@ -11,11 +14,11 @@
   <worldbody>
     <body name="medium_clamp" pos="0 0 0" euler="0 0 0">
       <freejoint name="medium_clamp_joint" />
-      
       <geom name="medium_clamp_visual_geom" type="mesh" mesh="medium_clamp_visual_mesh" material="medium_clamp_material" pos="-0.010827483056379221 0.014903599956658636 -0.012617934887942762" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="medium_clamp_collision_geom" type="mesh" mesh="medium_clamp_collision_mesh" pos="-0.010827483056379221 0.014903599956658636 -0.012617934887942762" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="medium_clamp_collision_geom_0" type="mesh" mesh="medium_clamp_collision_mesh_0" pos="-0.010827483056379221 0.014903599956658636 -0.012617934887942762" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="medium_clamp_collision_geom_1" type="mesh" mesh="medium_clamp_collision_mesh_1" pos="-0.010827483056379221 0.014903599956658636 -0.012617934887942762" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="medium_clamp_collision_geom_2" type="mesh" mesh="medium_clamp_collision_mesh_2" pos="-0.010827483056379221 0.014903599956658636 -0.012617934887942762" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="medium_clamp_collision_geom_3" type="mesh" mesh="medium_clamp_collision_mesh_3" pos="-0.010827483056379221 0.014903599956658636 -0.012617934887942762" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.059" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

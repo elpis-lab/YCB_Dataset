@@ -12,7 +12,13 @@
         <collision>
             <origin xyz="0.007698415494577894 0.017078163162294522 -0.08602381422432334" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="sugar_box/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="sugar_box/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.007698415494577894 0.017078163162294522 -0.08602381422432334" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="sugar_box/textured_coacd_1.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

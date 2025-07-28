@@ -12,7 +12,13 @@
         <collision>
             <origin xyz="-0.008499561933269988 0.021533112701872234 -0.00670927433639299" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="fork/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="fork/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.008499561933269988 0.021533112701872234 -0.00670927433639299" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="fork/textured_coacd_1.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

@@ -12,7 +12,25 @@
         <collision>
             <origin xyz="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="power_drill/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="power_drill/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="power_drill/textured_coacd_1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="power_drill/textured_coacd_2.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.030714691255337507 -0.024350845730285495 -0.02356763398968421" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="power_drill/textured_coacd_3.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

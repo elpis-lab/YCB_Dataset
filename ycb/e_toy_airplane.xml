@@ -3,7 +3,10 @@
 
   <asset>
     <mesh name="e_toy_airplane_visual_mesh" file="e_toy_airplane/textured.obj" />
-    <mesh name="e_toy_airplane_collision_mesh" file="e_toy_airplane/textured_vhacd.stl" />
+    <mesh name="e_toy_airplane_collision_mesh_0" file="e_toy_airplane/textured_coacd_0.stl" />
+    <mesh name="e_toy_airplane_collision_mesh_1" file="e_toy_airplane/textured_coacd_1.stl" />
+    <mesh name="e_toy_airplane_collision_mesh_2" file="e_toy_airplane/textured_coacd_2.stl" />
+    <mesh name="e_toy_airplane_collision_mesh_3" file="e_toy_airplane/textured_coacd_3.stl" />
     <texture name="e_toy_airplane_texture" type="2d" file="e_toy_airplane/texture_map.png" />
     <material name="e_toy_airplane_material" texture="e_toy_airplane_texture" />
   </asset>
@@ -11,11 +14,11 @@
   <worldbody>
     <body name="e_toy_airplane" pos="0 0 0" euler="0 0 0">
       <freejoint name="e_toy_airplane_joint" />
-      
       <geom name="e_toy_airplane_visual_geom" type="mesh" mesh="e_toy_airplane_visual_mesh" material="e_toy_airplane_material" pos="0.015461052619458251 0.007752454040306524 -0.021859940254387186" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="e_toy_airplane_collision_geom" type="mesh" mesh="e_toy_airplane_collision_mesh" pos="0.015461052619458251 0.007752454040306524 -0.021859940254387186" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="e_toy_airplane_collision_geom_0" type="mesh" mesh="e_toy_airplane_collision_mesh_0" pos="0.015461052619458251 0.007752454040306524 -0.021859940254387186" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="e_toy_airplane_collision_geom_1" type="mesh" mesh="e_toy_airplane_collision_mesh_1" pos="0.015461052619458251 0.007752454040306524 -0.021859940254387186" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="e_toy_airplane_collision_geom_2" type="mesh" mesh="e_toy_airplane_collision_mesh_2" pos="0.015461052619458251 0.007752454040306524 -0.021859940254387186" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="e_toy_airplane_collision_geom_3" type="mesh" mesh="e_toy_airplane_collision_mesh_3" pos="0.015461052619458251 0.007752454040306524 -0.021859940254387186" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.114" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

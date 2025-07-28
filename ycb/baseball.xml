@@ -3,7 +3,7 @@
 
   <asset>
     <mesh name="baseball_visual_mesh" file="baseball/textured.obj" />
-    <mesh name="baseball_collision_mesh" file="baseball/textured_vhacd.stl" />
+    <mesh name="baseball_collision_mesh_0" file="baseball/textured_coacd_0.stl" />
     <texture name="baseball_texture" type="2d" file="baseball/texture_map.png" />
     <material name="baseball_material" texture="baseball_texture" />
   </asset>
@@ -11,11 +11,8 @@
   <worldbody>
     <body name="baseball" pos="0 0 0" euler="0 0 0">
       <freejoint name="baseball_joint" />
-      
       <geom name="baseball_visual_geom" type="mesh" mesh="baseball_visual_mesh" material="baseball_material" pos="0.009947985025210358 0.04811623557140466 -0.03592664752018525" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="baseball_collision_geom" type="mesh" mesh="baseball_collision_mesh" pos="0.009947985025210358 0.04811623557140466 -0.03592664752018525" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="baseball_collision_geom_0" type="mesh" mesh="baseball_collision_mesh_0" pos="0.009947985025210358 0.04811623557140466 -0.03592664752018525" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.138" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

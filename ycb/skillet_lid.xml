@@ -3,7 +3,10 @@
 
   <asset>
     <mesh name="skillet_lid_visual_mesh" file="skillet_lid/textured.obj" />
-    <mesh name="skillet_lid_collision_mesh" file="skillet_lid/textured_vhacd.stl" />
+    <mesh name="skillet_lid_collision_mesh_0" file="skillet_lid/textured_coacd_0.stl" />
+    <mesh name="skillet_lid_collision_mesh_1" file="skillet_lid/textured_coacd_1.stl" />
+    <mesh name="skillet_lid_collision_mesh_2" file="skillet_lid/textured_coacd_2.stl" />
+    <mesh name="skillet_lid_collision_mesh_3" file="skillet_lid/textured_coacd_3.stl" />
     <texture name="skillet_lid_texture" type="2d" file="skillet_lid/texture_map.png" />
     <material name="skillet_lid_material" texture="skillet_lid_texture" />
   </asset>
@@ -11,11 +14,11 @@
   <worldbody>
     <body name="skillet_lid" pos="0 0 0" euler="0 0 0">
       <freejoint name="skillet_lid_joint" />
-      
       <geom name="skillet_lid_visual_geom" type="mesh" mesh="skillet_lid_visual_mesh" material="skillet_lid_material" pos="-0.0046148964588229565 -0.028319651848624068 -0.02009889767674283" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="skillet_lid_collision_geom" type="mesh" mesh="skillet_lid_collision_mesh" pos="-0.0046148964588229565 -0.028319651848624068 -0.02009889767674283" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="skillet_lid_collision_geom_0" type="mesh" mesh="skillet_lid_collision_mesh_0" pos="-0.0046148964588229565 -0.028319651848624068 -0.02009889767674283" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="skillet_lid_collision_geom_1" type="mesh" mesh="skillet_lid_collision_mesh_1" pos="-0.0046148964588229565 -0.028319651848624068 -0.02009889767674283" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="skillet_lid_collision_geom_2" type="mesh" mesh="skillet_lid_collision_mesh_2" pos="-0.0046148964588229565 -0.028319651848624068 -0.02009889767674283" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="skillet_lid_collision_geom_3" type="mesh" mesh="skillet_lid_collision_mesh_3" pos="-0.0046148964588229565 -0.028319651848624068 -0.02009889767674283" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.652" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

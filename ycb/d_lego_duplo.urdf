@@ -12,7 +12,25 @@
         <collision>
             <origin xyz="0.02022260894778108 0.029911376763957505 -0.022775232245389507" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="d_lego_duplo/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="d_lego_duplo/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.02022260894778108 0.029911376763957505 -0.022775232245389507" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="d_lego_duplo/textured_coacd_1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.02022260894778108 0.029911376763957505 -0.022775232245389507" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="d_lego_duplo/textured_coacd_2.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.02022260894778108 0.029911376763957505 -0.022775232245389507" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="d_lego_duplo/textured_coacd_3.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

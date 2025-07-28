@@ -12,7 +12,25 @@
         <collision>
             <origin xyz="0.04948007536634335 -0.011121747774205814 -0.025398688412704613" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="b_toy_airplane/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="b_toy_airplane/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.04948007536634335 -0.011121747774205814 -0.025398688412704613" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="b_toy_airplane/textured_coacd_1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.04948007536634335 -0.011121747774205814 -0.025398688412704613" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="b_toy_airplane/textured_coacd_2.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.04948007536634335 -0.011121747774205814 -0.025398688412704613" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="b_toy_airplane/textured_coacd_3.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

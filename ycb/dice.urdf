@@ -12,7 +12,25 @@
         <collision>
             <origin xyz="0.011207378509108022 -0.00916334296155129 -0.008407354793330487" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="dice/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="dice/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.011207378509108022 -0.00916334296155129 -0.008407354793330487" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="dice/textured_coacd_1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.011207378509108022 -0.00916334296155129 -0.008407354793330487" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="dice/textured_coacd_2.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.011207378509108022 -0.00916334296155129 -0.008407354793330487" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="dice/textured_coacd_3.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

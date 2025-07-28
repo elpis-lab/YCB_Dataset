@@ -12,7 +12,25 @@
         <collision>
             <origin xyz="-0.01450146241685899 0.049664842094331994 -0.004250780997626007" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="adjustable_wrench/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="adjustable_wrench/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.01450146241685899 0.049664842094331994 -0.004250780997626007" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="adjustable_wrench/textured_coacd_1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.01450146241685899 0.049664842094331994 -0.004250780997626007" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="adjustable_wrench/textured_coacd_2.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.01450146241685899 0.049664842094331994 -0.004250780997626007" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="adjustable_wrench/textured_coacd_3.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

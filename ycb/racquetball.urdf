@@ -12,7 +12,7 @@
         <collision>
             <origin xyz="0.009071044745210352 0.12221649947970037 -0.027571138362930195" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="racquetball/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="racquetball/textured_coacd_0.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

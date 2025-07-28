@@ -3,7 +3,7 @@
 
   <asset>
     <mesh name="racquetball_visual_mesh" file="racquetball/textured.obj" />
-    <mesh name="racquetball_collision_mesh" file="racquetball/textured_vhacd.stl" />
+    <mesh name="racquetball_collision_mesh_0" file="racquetball/textured_coacd_0.stl" />
     <texture name="racquetball_texture" type="2d" file="racquetball/texture_map.png" />
     <material name="racquetball_material" texture="racquetball_texture" />
   </asset>
@@ -11,11 +11,8 @@
   <worldbody>
     <body name="racquetball" pos="0 0 0" euler="0 0 0">
       <freejoint name="racquetball_joint" />
-      
       <geom name="racquetball_visual_geom" type="mesh" mesh="racquetball_visual_mesh" material="racquetball_material" pos="0.009071044745210352 0.12221649947970037 -0.027571138362930195" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="racquetball_collision_geom" type="mesh" mesh="racquetball_collision_mesh" pos="0.009071044745210352 0.12221649947970037 -0.027571138362930195" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="racquetball_collision_geom_0" type="mesh" mesh="racquetball_collision_mesh_0" pos="0.009071044745210352 0.12221649947970037 -0.027571138362930195" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.041" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

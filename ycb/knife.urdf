@@ -12,7 +12,13 @@
         <collision>
             <origin xyz="-0.008445076147284661 0.029092631283473027 -0.005000385834128536" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="knife/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="knife/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.008445076147284661 0.029092631283473027 -0.005000385834128536" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="knife/textured_coacd_1.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

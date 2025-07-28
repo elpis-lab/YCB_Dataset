@@ -3,7 +3,7 @@
 
   <asset>
     <mesh name="wood_block_visual_mesh" file="wood_block/textured.obj" />
-    <mesh name="wood_block_collision_mesh" file="wood_block/textured_vhacd.stl" />
+    <mesh name="wood_block_collision_mesh_0" file="wood_block/textured_coacd_0.stl" />
     <texture name="wood_block_texture" type="2d" file="wood_block/texture_map.png" />
     <material name="wood_block_material" texture="wood_block_texture" />
   </asset>
@@ -11,11 +11,8 @@
   <worldbody>
     <body name="wood_block" pos="0 0 0" euler="0 0 0">
       <freejoint name="wood_block_joint" />
-      
       <geom name="wood_block_visual_geom" type="mesh" mesh="wood_block_visual_mesh" material="wood_block_material" pos="-0.0233730518561954 0.010273626224740963 -0.10276919233489218" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="wood_block_collision_geom" type="mesh" mesh="wood_block_collision_mesh" pos="-0.0233730518561954 0.010273626224740963 -0.10276919233489218" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="wood_block_collision_geom_0" type="mesh" mesh="wood_block_collision_mesh_0" pos="-0.0233730518561954 0.010273626224740963 -0.10276919233489218" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.729" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

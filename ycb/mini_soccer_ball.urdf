@@ -12,7 +12,7 @@
         <collision>
             <origin xyz="0.0059125914007175946 -0.011530561800764411 -0.06131555334762107" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="mini_soccer_ball/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="mini_soccer_ball/textured_coacd_0.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

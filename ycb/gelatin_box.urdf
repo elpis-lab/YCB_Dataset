@@ -12,7 +12,13 @@
         <collision>
             <origin xyz="0.02267551794293906 0.007860203252540228 -0.013877966045089096" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="gelatin_box/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="gelatin_box/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.02267551794293906 0.007860203252540228 -0.013877966045089096" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="gelatin_box/textured_coacd_1.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

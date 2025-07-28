@@ -12,7 +12,25 @@
         <collision>
             <origin xyz="-0.0013105802251075094 0.003861242636253375 -0.03633673271131293" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="apple/textured_vhacd.stl" scale="1 1 1" />
+                <mesh filename="apple/textured_coacd_0.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.0013105802251075094 0.003861242636253375 -0.03633673271131293" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="apple/textured_coacd_1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.0013105802251075094 0.003861242636253375 -0.03633673271131293" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="apple/textured_coacd_2.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.0013105802251075094 0.003861242636253375 -0.03633673271131293" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="apple/textured_coacd_3.stl" scale="1 1 1" />
             </geometry>
         </collision>
         <inertial>

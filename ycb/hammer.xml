@@ -3,7 +3,10 @@
 
   <asset>
     <mesh name="hammer_visual_mesh" file="hammer/textured.obj" />
-    <mesh name="hammer_collision_mesh" file="hammer/textured_vhacd.stl" />
+    <mesh name="hammer_collision_mesh_0" file="hammer/textured_coacd_0.stl" />
+    <mesh name="hammer_collision_mesh_1" file="hammer/textured_coacd_1.stl" />
+    <mesh name="hammer_collision_mesh_2" file="hammer/textured_coacd_2.stl" />
+    <mesh name="hammer_collision_mesh_3" file="hammer/textured_coacd_3.stl" />
     <texture name="hammer_texture" type="2d" file="hammer/texture_map.png" />
     <material name="hammer_material" texture="hammer_texture" />
   </asset>
@@ -11,11 +14,11 @@
   <worldbody>
     <body name="hammer" pos="0 0 0" euler="0 0 0">
       <freejoint name="hammer_joint" />
-      
       <geom name="hammer_visual_geom" type="mesh" mesh="hammer_visual_mesh" material="hammer_material" pos="0.028570860769310643 0.012672673714671625 -0.01565348414608536" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="hammer_collision_geom" type="mesh" mesh="hammer_collision_mesh" pos="0.028570860769310643 0.012672673714671625 -0.01565348414608536" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="hammer_collision_geom_0" type="mesh" mesh="hammer_collision_mesh_0" pos="0.028570860769310643 0.012672673714671625 -0.01565348414608536" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="hammer_collision_geom_1" type="mesh" mesh="hammer_collision_mesh_1" pos="0.028570860769310643 0.012672673714671625 -0.01565348414608536" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="hammer_collision_geom_2" type="mesh" mesh="hammer_collision_mesh_2" pos="0.028570860769310643 0.012672673714671625 -0.01565348414608536" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="hammer_collision_geom_3" type="mesh" mesh="hammer_collision_mesh_3" pos="0.028570860769310643 0.012672673714671625 -0.01565348414608536" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.665" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>

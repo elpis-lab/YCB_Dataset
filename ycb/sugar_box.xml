@@ -3,7 +3,8 @@
 
   <asset>
     <mesh name="sugar_box_visual_mesh" file="sugar_box/textured.obj" />
-    <mesh name="sugar_box_collision_mesh" file="sugar_box/textured_vhacd.stl" />
+    <mesh name="sugar_box_collision_mesh_0" file="sugar_box/textured_coacd_0.stl" />
+    <mesh name="sugar_box_collision_mesh_1" file="sugar_box/textured_coacd_1.stl" />
     <texture name="sugar_box_texture" type="2d" file="sugar_box/texture_map.png" />
     <material name="sugar_box_material" texture="sugar_box_texture" />
   </asset>
@@ -11,11 +12,9 @@
   <worldbody>
     <body name="sugar_box" pos="0 0 0" euler="0 0 0">
       <freejoint name="sugar_box_joint" />
-      
       <geom name="sugar_box_visual_geom" type="mesh" mesh="sugar_box_visual_mesh" material="sugar_box_material" pos="0.007698415494577894 0.017078163162294522 -0.08602381422432334" euler="0 0 0" contype="0" conaffinity="0" group="0" />
-      
-      <geom name="sugar_box_collision_geom" type="mesh" mesh="sugar_box_collision_mesh" pos="0.007698415494577894 0.017078163162294522 -0.08602381422432334" euler="0 0 0" contype="1" conaffinity="1" group="3" />
-      
+      <geom name="sugar_box_collision_geom_0" type="mesh" mesh="sugar_box_collision_mesh_0" pos="0.007698415494577894 0.017078163162294522 -0.08602381422432334" euler="0 0 0" contype="1" conaffinity="1" group="3" />
+      <geom name="sugar_box_collision_geom_1" type="mesh" mesh="sugar_box_collision_mesh_1" pos="0.007698415494577894 0.017078163162294522 -0.08602381422432334" euler="0 0 0" contype="1" conaffinity="1" group="3" />
       <inertial pos="0 0 0" euler="0 0 0" mass="0.514" diaginertia="0.001 0.001 0.001" />
     </body>
   </worldbody>
